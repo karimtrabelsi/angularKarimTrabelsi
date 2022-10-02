@@ -1,0 +1,29 @@
+<!--
+<p>{{test}} works!</p>
+<input type="submit" value="send" (click)="showMsg()"> 
+<div [style.backgroundColor]="kolor">BONJOUUUUUUUUUUUUUUUUUUUUUUUUUUUR</div>
+<input type="text" [(ngModel)]="kolor"> -->
+
+
+<div *ngFor="let product of products">
+<div *ngIf="product.libelle=='hp'">
+    <div [style.backgroundColor]="'red'">
+        {{product.idFournisseur}}
+        {{product.libelle}}
+    </div>
+</div>
+<div *ngIf="product.libelle!='hp'">
+    <div [style.backgroundColor]="'green'">
+        {{product.idFournisseur}}
+        {{product.libelle}}
+    </div>
+</div>    
+
+<div [ngStyle]="{'backgroundColor':product.libelle=='hp'?'red':'green'}">
+    {{product.code}}
+</div>
+    
+    
+</div>
+
+<input [ngClass]="changeKlass()" type="submit" value="send">

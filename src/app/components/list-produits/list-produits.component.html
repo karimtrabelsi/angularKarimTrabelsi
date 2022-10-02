@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+<div class="col-4">
+    <h1>Recherche Produit</h1>
+    <input  [(ngModel)]="prod" type="text">
+</div>
+<div class="col-4">
+    <h1>Ajout d'un Produit</h1>
+    <form action="">
+        <label for="idp">idProduit:</label><br>
+  <input type="text" id="idp" name="idp"><br>
+  
+        <label for="code">Code:</label><br>
+  <input type="text" id="code" name="code"><br>
+  
+        <label for="libelle">Libelle:</label><br>
+  <input type="text" id="libelle" name="libelle"><br>
+  
+        <label for="prix">Prix Unitaire:</label><br>
+  <input type="text" id="prix" name="prix"><br>
+  
+        <label for="tva">Taux TVA:</label><br>
+  <input type="text" id="tva" name="tva"><br>
+  
+    </form>
+</div>
+</div>
+<div *ngFor="let produit of produits" class="border border-dark" >
+    <div > 
+    <div [ngStyle]="{'backgroundColor':produit.prixUnitaire<=50?'white':'white'}">
+    <p [ngClass]="changeKolor(produit)">Produit : {{produit.libelle}} <button [disabled]="produit.tauxTVA==0.02" (click)="showText(produit)" >Ajuster TVA</button> 
+     </p> <p style="color:red;" *ngIf="textShow">TVA modifiée</p>
+    <p [ngClass]="changeKolor(produit)">Identifiant : {{produit.idProduit}} </p>
+    <p [ngClass]="changeKolor(produit)">Code : {{produit.code}} </p>
+    <p [ngClass]="changeKolor(produit)">Prix Unitaire : {{produit.prixUnitaire}} </p>
+    <p [ngClass]="changeKolor(produit)">Taux TVA : {{produit.tauxTVA}} </p>
+    </div>
+</div>
+</div>
