@@ -1,3 +1,4 @@
+<!-- 
 <div class="row justify-content-center">
 <div class="col-4">
     <h1>Recherche Produit</h1>
@@ -35,4 +36,16 @@
     <p [ngClass]="changeKolor(produit)">Taux TVA : {{produit.tauxTVA}} </p>
     </div>
 </div>
+</div> -->
+
+
+<div *ngFor="let i of ListProduct let j = index"> 
+      <h1>idProduct:  {{ i.idProduit}} 
+            | code: {{ i.code}}
+            | libelle:  {{ i.libelle}}
+            | prixunitaire: {{ i.prixUnitaire}}
+            | tauxTva: {{ i.tauxTVA}}</h1>
+            <button (click)="handle(i.libelle); selectedRow=j">submit</button>
+            <h2 [hidden]="selectedRow !== j">{{data}}</h2>
+        
 </div>
