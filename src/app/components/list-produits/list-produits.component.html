@@ -39,13 +39,17 @@
 </div> -->
 
 
-<div *ngFor="let i of ListProduct let j = index"> 
-      <h1>idProduct:  {{ i.idProduit}} 
-            | code: {{ i.code}}
-            | libelle:  {{ i.libelle}}
-            | prixunitaire: {{ i.prixUnitaire}}
-            | tauxTva: {{ i.tauxTVA}}</h1>
-            <button (click)="handle(i.libelle); selectedRow=j">submit</button>
-            <h2 [hidden]="selectedRow !== j">{{data}}</h2>
-        
+<div> 
+          
+            
+            <ul class="list-group" *ngFor="let i of ListProduct let j = index">
+                  <li class="list-group-item active">idProduct:  {{ i.idProduit}} </li>
+                  <li class="list-group-item">code: {{ i.code}}</li>
+                  <li class="list-group-item">libelle:  {{ i.libelle}}</li>
+                  <li class="list-group-item">prixunitaire: {{ i.prixUnitaire}}</li>
+                  <li class="list-group-item">tauxTva: {{ i.tauxTVA}}</li>
+                
+                <button (click)="handle(i.libelle); selectedRow=j">Calculer</button>
+                <h2 [hidden]="selectedRow !== j">{{data}}</h2>
+            </ul>
 </div>
