@@ -1,1 +1,19 @@
-<p>provider works!</p>
+<form #f="ngForm">
+    <label>discountAmount</label>
+    <input type="text" name="discountAmount" ngModel >
+    <label>billAmount</label >
+    <input type="text" name="billAmount"  ngModel >
+    <label>dateBill</label >
+    <input type="text" name="billAmount"  ngModel >
+    <label>status</label >
+    <input type="text" name="billAmount"  ngModel >
+    <input type="submit" value="save" (click)="addInvoice(f.value)" >
+</form>
+
+<div *ngFor="let invoice of invoices">
+    {{invoice.idInvoice}}
+    {{invoice.dateBill}}
+    {{invoice.discountAmount}}
+    {{invoice.status}}
+    <button (click)="delete(this.invoice)">Delete</button>
+</div>

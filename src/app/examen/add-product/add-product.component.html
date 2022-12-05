@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<div>
+  <form #f="ngForm">
+    <label for="">Name</label>
+    <input
+      id="nom"
+      name="name"
+      type="text"
+      placeholder="Nom"
+      ngModel
+      required
+      #name="ngModel"
+    />
+    <app-errors>[errors]="name"</app-errors>
+    <label for="">Price</label>
+    <input
+      name="price"
+      type="text"
+      placeholder="Prix"
+      ngModel
+      pattern="[0-9]*"
+      #price="ngModel"
+    />
+    <app-errors>[errors]="price"</app-errors>
+    <label for="">Description</label>
+    <input
+      type="text"
+      name="desc"
+      placeholder="Description"
+      ngModel
+      length="10"
+      #desc="ngModel"
+    />
+    <app-errors>[errors]="desc"</app-errors>
+    <button type="submit" [disabled]="f.invalid">Add Product</button>
+  </form>
+</div>

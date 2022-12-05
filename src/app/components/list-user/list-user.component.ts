@@ -12,8 +12,9 @@ export class ListUserComponent implements OnInit {
   constructor(private userservice:UserService) { }
 
   ngOnInit(): void {
-    this.users = this.userservice.getAllUsers();
-   console.log(this.userservice.fetchNbInList(this.userservice.list,'firstName','Mila'));
+    //this.users = this.userservice.getAllUsers();
+   
+   //console.log(this.userservice.fetchNbInList(this.userservice.list,'firstName','Mila'));
     
   }
 

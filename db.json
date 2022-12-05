@@ -1,0 +1,126 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "idCustomer": 1,
+      "firstName": "Mila",
+      "lastName": " Kunis",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Admin",
+      "email": "mila@kunis.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
+      "profession": "Software Engineer"
+    },
+    {
+      "idCustomer": 2,
+      "firstName": "George",
+      "lastName": "Clooney",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Customer",
+      "email": "marlon@brando.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar2.png",
+      "profession": "Software Engineer"
+    },
+    {
+      "idCustomer": 3,
+      "firstName": "George",
+      "lastName": "Clooney",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Customer",
+      "email": "marlon@brando.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png",
+      "profession": "Software Engineer"
+    },
+    {
+      "idCustomer": 4,
+      "firstName": "Ryan",
+      "lastName": "Gossling",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Golden",
+      "email": "Ryan@nicholson.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar4.png",
+      "profession": "Software Engineer"
+    },
+    {
+      "idCustomer": 5,
+      "firstName": "Robert",
+      "lastName": "Downey",
+      "birthDate": "1999-06-30",
+      "accountCategory": "Blocked Account",
+      "email": "robert@nicholson.com",
+      "password": "test",
+      "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
+      "profession": "Software Engineer"
+    }
+  ],
+  "invoices": [
+    {
+      "idInvoice": 1,
+      "discountAmount": 10,
+      "billAmount": 20,
+      "dateBill": "11/13/2022",
+      "status": true
+    },
+    {
+      "idInvoice": 2,
+      "discountAmount": 50,
+      "billAmount": 40,
+      "dateBill": "11/13/2022",
+      "status": false
+    },
+    {
+      "idInvoice": 3,
+      "discountAmount": 22,
+      "billAmount": 11,
+      "dateBill": "11/13/2022",
+      "status": true
+    },
+    {
+      "idInvoice": 4,
+      "discountAmount": 15,
+      "billAmount": 28,
+      "dateBill": "11/13/2022",
+      "status": false
+    }
+  ],
+  "accounts":[
+{
+  "id": 1,
+  "title" : "Admin Account",
+  "image": "image",
+  "description": "description test"
+},
+{
+  "id": 2,
+  "title" : "Customer Account",
+  "image": "image",
+  "description": "description test"
+},
+{
+  "id": 3,
+  "title" : "Golden Account",
+  "image": "image",
+  "description": "description test"
+}
+  ]
+}

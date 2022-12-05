@@ -1,0 +1,5 @@
+<div *ngIf="errors.invalid">
+  <div *ngIf="errors.erros?.['required']">Required!</div>
+  <div *ngIf="errors.erros?.['minlength']">Minlength!</div>
+  <div *ngIf="errors.erros?.['pattern']">Pattern!</div>
+</div>
